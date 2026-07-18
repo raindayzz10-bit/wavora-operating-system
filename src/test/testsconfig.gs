@@ -15,6 +15,13 @@ function testDatabase() {
   Logger.log(data);
 
 }
+
+function testIDGenerator() {
+
+  Logger.log(IDGenerator.generateAthleteID());
+
+}
+
 function hello() {
 
   Logger.log("HELLO WOS");
