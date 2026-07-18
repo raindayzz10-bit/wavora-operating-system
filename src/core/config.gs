@@ -1,0 +1,67 @@
+/**
+ * ==========================================================
+ * WAVORA OPERATING SYSTEM
+ * Configuration
+ * Version : 0.1.0
+ * ==========================================================
+ */
+
+const CONFIG = {
+
+  APP: {
+
+    NAME: "WAVORA Operating System",
+
+    SHORT_NAME: "WOS",
+
+    VERSION: "0.1.0",
+
+    OWNER: "WAVORA Aquatic Academy"
+
+  },
+
+  ID: {
+
+    PREFIX: "WVA",
+
+    ATHLETE_DIGIT: 4
+
+  },
+
+  SHEETS: {
+
+    DASHBOARD: "Dashboard",
+
+    ATHLETES: "Database Atlet",
+
+    ATTENDANCE: "Attendance",
+
+    PROGRESS: "Progress",
+
+    COMPETITION: "Competition",
+
+    MEDALS: "Medals",
+
+    PASSPORT: "Passport",
+
+    PROMOTION: "Promotion",
+
+    COACH: "Coach",
+
+    SETTINGS: "Settings"
+
+  },
+
+  LEVELS: [
+
+    "Level 1",
+
+    "Level 2",
+
+    "Level 3",
+
+    "Competitive Team"
+
+  ]
+
+};
