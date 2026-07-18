@@ -27,30 +27,31 @@ const CONFIG = {
     ATHLETE_DIGIT: 4
 
   },
+SHEETS: {
 
-  SHEETS: {
+  DASHBOARD: "DASHBOARD",
 
-    DASHBOARD: "Dashboard",
+  ATHLETES: "DATABASE ATLET",
 
-    ATHLETES: "Database Atlet",
+  ATTENDANCE: "ATTENDANCE",
 
-    ATTENDANCE: "Attendance",
+  PROGRESS: "PROGRES",
 
-    PROGRESS: "Progress",
+  COMPETITION: "COMPETITION",
 
-    COMPETITION: "Competition",
+  MEDALS: "MEDAL",
 
-    MEDALS: "Medals",
+  PASSPORT: "PASSPORT",
 
-    PASSPORT: "Passport",
+  PROMOTION: "PROMOTION",
 
-    PROMOTION: "Promotion",
+  COACH: "COACH",
 
-    COACH: "Coach",
+  SETTINGS: "SETTINGS"
 
-    SETTINGS: "Settings"
+},
 
-  },
+ 
 
   LEVELS: [
 

@@ -8,47 +8,74 @@
 
 const Database = {
 
-  /**
-   * Mengambil sheet berdasarkan nama
-   */
-  getSheet(sheetName){
+	/**
+	 * Mengambil sheet berdasarkan nama
+	 */
+	getSheet(sheetName){
 
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+		const ss = SpreadsheetApp.getActiveSpreadsheet();
 
-    const sheet = ss.getSheetByName(sheetName);
+		const sheet = ss.getSheetByName(sheetName);
 
-    if(!sheet){
+		if(!sheet){
 
-      throw new Error(`Sheet "${sheetName}" tidak ditemukan.`);
+			throw new Error(`Sheet "${sheetName}" tidak ditemukan.`);
 
-    }
+		}
 
-    return sheet;
+		return sheet;
 
-  },
+	},
 
-  /**
-   * Mengambil seluruh data
-   */
-  getAll(sheetName){
+	/**
+	 * Mengambil seluruh data
+	 */
+	getAll(sheetName){
 
-    const sheet = this.getSheet(sheetName);
+		const sheet = this.getSheet(sheetName);
 
-    return sheet.getDataRange().getValues();
+		return sheet.getDataRange().getValues();
 
-  },
+	},
 
-  /**
-   * Menambahkan satu baris data
-   */
-  insert(sheetName,rowData){
+	/**
+	 * Menambahkan satu baris data
+	 */
+	insert(sheetName,rowData){
 
-    const sheet = this.getSheet(sheetName);
+		const sheet = this.getSheet(sheetName);
 
-    sheet.appendRow(rowData);
+		sheet.appendRow(rowData);
 
-    return true;
+		return true;
 
-  }
+	},
+
+	/**
+	 * Mencari data berdasarkan kolom
+	 */
+	find(sheetName,columnIndex,value){
+
+		const data = this.getAll(sheetName);
+
+		return data.find((row,index)=>{
+
+			if(index===0) return false;
+
+			return row[columnIndex]===value;
+
+		});
+
+	},
+
+	/**
+	 * Mengecek apakah data sudah ada
+	 */
+	exists(sheetName,columnIndex,value){
+
+		return this.find(sheetName,columnIndex,value)!==undefined;
+
+	}
 
 };
+
